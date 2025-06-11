@@ -1,0 +1,89 @@
+.profile-region {
+    .pageOrderableContainer_item {
+        position: relative;
+        z-index: 1;
+    }
+
+    .pageOrderableContainer_item:nth-child(even):after {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 100vw;
+        height: 100%;
+        margin-left: -50vw;
+        z-index: -1;
+        background-color: #F6F5F5;
+        content: '';
+    }
+}
+
+.support-page {
+    @include media-breakpoint-up(lg) {
+        .sideBar {
+            &_container {
+                margin-left: auto;
+            }
+        }
+    }
+
+    .additionalInfo {
+        &_title {
+            margin-left: 0;
+        }
+        &_grid {
+            &--col-1 {
+                grid-template-columns: 1fr;
+            }
+    
+            &--col-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+    
+            &--with-sidebar {
+                grid-template-columns: calc(100% / 12 * 8) calc(100% / 12 * 4);
+            }
+    
+            &--with-sidebar.additionalInfo_grid--sidebar-left {
+                grid-template-columns: calc(100% / 12 * 3) calc(100% / 12 * 9);
+            }
+    
+            &--with-sidebar.additionalInfo_grid--col-2 {
+                grid-template-columns: calc(100% / 12 * 3) calc(100% / 12 * 3) calc(100% / 12 * 6);
+            }
+        }
+        &_info {
+            &--col-1 {
+                grid-column: 1;
+            }
+            &--col-1.additionalInfo_info--sidebar-left {
+                grid-column: 2;
+            }
+            &--col-2 {
+                &:nth-child(odd) {
+                    grid-column: 1;
+                }
+                &:nth-child(even) {
+                    grid-column: 2;
+                }
+            }
+            &--col-2.additionalInfo_info--sidebar-left {
+                &:nth-child(odd) {
+                    grid-column: 2;
+                }
+                &:nth-child(even) {
+                    grid-column: 3;
+                }
+            }
+        }
+        
+        &_sidebar {
+            grid-column: calc(var(--info-column, 2) + 1);
+            &--left {
+                grid-column: 1;
+                .sideBar_container {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

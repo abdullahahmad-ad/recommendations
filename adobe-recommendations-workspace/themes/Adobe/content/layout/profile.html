@@ -1,0 +1,22 @@
+{% extends "/layout/base.html" %}
+
+
+{% block dataPage %}profile{% endblock %}
+{% block mainRegionClass %}profile-region{% endblock %}
+
+{% block headContent %}{% endblock %}
+
+{% block content %}
+    {% block profileContentHeader %}
+        <component name="ProductBanner" id="ProductBanner"></component>
+        <component name="ProductTabMenu" id="ProductTabMenu"></component>
+    {% endblock %}
+    <div class="{% block profileSpacer %}global-component-spacer{% endblock %}">
+        {% block profileContent %}{% endblock %}
+
+        {% block belowProfileContent %}
+            <component name="ProductSimilarApps" id="ProductSimilarApps"></component>
+        {% endblock %}
+    </div>
+    <component name="StickyButtonPageScroll" id="StickyButtonPageScroll"></component>
+{% endblock %}

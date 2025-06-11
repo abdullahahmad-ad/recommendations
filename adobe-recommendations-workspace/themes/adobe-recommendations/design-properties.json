@@ -1,0 +1,18 @@
+{
+  "headerNavBg": "#0076ce",
+  "headerNavBorderColor": "#0076ce",
+  "headerNavItemBgHover": "#1187df",
+  "headerNavItemBgSelected": "#006dc5",
+  "headerNavFontColor": "#ffffff",
+  "headerNavFontHoverColor": "#d2d5d9",
+  "headerNavFontSelectedColor": "#fcfdfd",
+  "headerNavTooltipBg": "#2d2a27",
+  "headerNavTooltipFontColor": "#fff",
+  "headerNavDropdownFontColor": "#474747",
+  "headerNavDropdownBg": "#fff",
+  "headerNavDropdownBorderColor": "#eaeaea",
+  "headerNavDropdownBorderColorHover": "#007b99",
+  "headerNavDropdownBgHover": "#0076ce30",
+  "headerNavDropdownFontColorHover": "#fff",
+  "headerNavDropdownMarginRight": "0"
+}

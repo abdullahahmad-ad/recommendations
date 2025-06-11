@@ -1,0 +1,15 @@
+@import '../../theme/mixins/scroll-button';
+
+.stickyButtonPageScroll {
+    &_wrapper {
+        // Have higher z-index than cms toolbar on the right side
+        z-index: 100000;
+        
+
+        .buttonPageScroll {
+            &_button {
+                @include scroll-button-offset-position;
+            }
+        }
+    }
+}

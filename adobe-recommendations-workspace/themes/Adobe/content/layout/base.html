@@ -1,0 +1,91 @@
+{% from "/macros/sfb-components-bundles.html" import componentsBundles %}
+{% from "/macros/sfb-custom-components-bundles.html" import customComponentsBundles with context %}
+<!doctype html>
+
+<html lang="{{ config.locale.code }}">
+<head>
+  {% if meta.noIndex %}
+  <meta name="robots" content="noindex" />
+  {% endif %}    
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% block meta_title %}<title>{{ meta.title }}</title>{% endblock %}
+  {% block meta_description %}<meta name="description" content="{{ meta.description }}">{% endblock %}
+  {% block meta_keywords %}<meta name="keywords" content="{{ meta.keywords }}">{% endblock %}
+  {% block meta_author %}<meta name="author" content="{{ meta.author }}">{% endblock %}
+
+  {% block meta_opengraph %}
+  {% if meta.url %}
+  <meta property="og:url" content="{{ meta.url }}" />
+  {% else %}
+  <meta property="og:url" content="{{ meta.baseUrl }}" />
+  {% endif %}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ meta.title }}" />
+  <meta property="og:description" content="{{ meta.description }}" />
+  <meta property="og:image" content="{{ meta.image }}" />
+  {% endblock %}
+
+  {% block meta_twitter %}
+  <meta property="twitter:card" content="{{ meta.card }}" />
+  <meta property="twitter:title" content="{{ meta.title }}" />
+  <meta property="twitter:image" content="{{ meta.image }}" />
+  <meta property="twitter:description" content="{{ meta.description }}" />
+  {% endblock %}
+
+  <link rel="shortcut icon" href="{{ config.channelSettings.customFavicon }}" type="image/x-icon">
+  <link rel="preload" as="font" href="{{ r("/assets/fonts/slick/slick.woff") }}" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ r("/assets/css/theme/theme-index.css") }}">
+
+  {{ customComponentsBundles(config) }}
+  <ad-theme
+    data-theme-template="@appdirect/sfb-theme-plaza"
+    data-theme-version="0.0.88"
+    data-created-by="external dev"
+    data-created-at="Tue Jun 10 2025 19:55:48 GMT+0530 (India Standard Time)"
+    data-custom-components="true"
+    data-custom-components-overrides-js=""
+    data-custom-components-overrides-scss=""
+    data-custom-components-user-defined="AdobeRecommendations"
+    data-sfb-theme-components-version="1.0.4">
+  </ad-theme>
+</head>
+
+<body data-page="{% block dataPage %}{% endblock %}">
+    <div class="skip-to-content">
+        <a class="skip-link sr-only sr-only-focusable" href="#mainContent">{{i18n.skipToMain}}</a>
+    </div>
+    <div class="page-wrapper">
+        {% block header %}
+            <header class="main-header" id="mainHeader">
+                <div class="container">
+                    <component name="Header" id="Header"></component>
+                </div>
+            </header>
+        {% endblock %}
+    
+        <main id="mainContent" class="main-region page_content page_content__condensed {% block mainRegionClass %}{% endblock %}" role="main">
+            {% block mainTitle %}{% endblock %}
+            {% block headContent %}{% endblock %}
+            <div class="profile-content">
+                {% block contentFullWidthContainer %}
+                    {% block contentFullWidth %}{% endblock %}
+                {% endblock %}
+                <div class="layout-default">
+                    <div class="container">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        {% block footer %}
+            <footer class="main-footer" id="mainFooter">
+                <div class="container">
+                    <component name="Footer" id="Footer"></component>
+                </div>
+            </footer>
+        {% endblock %}
+    </div>
+    <component name="GlobalAlerts" id="GlobalAlerts" editorVisible="false"></component>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/*
+ __variable definitions
+ */
+
+$generic-fontFace: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$genericFontSize: 16px;
+
+$body-fontFace: var(--bodyFont, "Helvetica Neue", Helvetica, Arial, sans-serif);
+$header-fontFace: var(--headingFont, "Helvetica Neue", Helvetica, Arial, sans-serif);
+
+$headingFontSizeXXLarge: calc(var(--headingBaseSize, 16px) + 26px);
+$headingFontSizeXLarge: calc(var(--headingBaseSize, 16px) + 20px);
+$headingFontSizeLarge: calc(var(--headingBaseSize, 16px) + 14px);
+$headingFontSize1: calc(var(--headingBaseSize, 16px) + 8px);
+$headingFontSize2: calc(var(--headingBaseSize, 16px) + 4px);
+$headingFontSize3: calc(var(--headingBaseSize, 16px) + 2px);
+$headingFontSize4: var(--headingBaseSize, 16px);
+$headingFontSize5: calc(var(--headingBaseSize, 16px) + -2px);
+$headingFontSize6: calc(var(--headingBaseSize, 16px) + -4px);
+
+$bodyFontSize1: calc(var(--bodyBaseSize, 16px) + 8px);
+$bodyFontSize2: calc(var(--bodyBaseSize, 16px) + 4px);
+$bodyFontSize3: calc(var(--bodyBaseSize, 16px) + 2px);
+$bodyFontSize4: var(--bodyBaseSize, 16px);
+$bodyFontSize5: calc(var(--bodyBaseSize, 16px) + -2px);
+$bodyFontSize6: calc(var(--bodyBaseSize, 16px) + -4px);
+$bodyFontSize7: calc(var(--headingBaseSize, 16px) + -5px);
+
+/*
+ __mixin definitions
+ */
+
+@mixin default($size) {
+    font: #{$size}/1.4em $generic-fontFace;
+}
+
+@mixin text($size) {
+    font: #{$size}/1.4em $generic-fontFace;
+    font-family: $body-fontFace;
+}
+
+@mixin title($size) {
+    @include text($size);
+    font-family: $header-fontFace;
+    font-weight: bold;
+    margin-bottom: 0.375em;
+}

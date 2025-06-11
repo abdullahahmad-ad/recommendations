@@ -1,0 +1,231 @@
+{
+  "globalStyles": {
+    "colors": {
+      "name": "Colors",
+      "iconName": "styles",
+      "componentName": "Colors",
+      "form": {
+        "description": {
+          "title": "uieditor.editorProperties.globalStyles.colors.description.title",
+          "type": "TEXT_BLOCK"
+        },
+        "primaryColor": {
+          "title": "uieditor.editorProperties.globalStyles.colors.primaryColor.title",
+          "type": "COLORPICKER",
+          "defaultValue": "#0076ce",
+          "caption": "uieditor.editorProperties.globalStyles.colors.primaryColor.caption"
+        },
+        "secondaryColor": {
+          "title": "uieditor.editorProperties.globalStyles.colors.secondaryColor.title",
+          "type": "COLORPICKER",
+          "defaultValue": "#f1f1f1",
+          "caption": "uieditor.editorProperties.globalStyles.colors.secondaryColor.caption"
+        },
+        "emphasisColor": {
+          "title": "uieditor.editorProperties.globalStyles.colors.emphasisColor.title",
+          "type": "COLORPICKER",
+          "defaultValue": "#00802b",
+          "caption": "uieditor.editorProperties.globalStyles.colors.emphasisColor.caption"
+        },
+        "altEmphasisColor": {
+          "title": "uieditor.editorProperties.globalStyles.colors.altEmphasisColor.title",
+          "type": "COLORPICKER",
+          "defaultValue": "#d14600",
+          "caption": "uieditor.editorProperties.globalStyles.colors.altEmphasisColor.caption"
+        },
+        "titleText": {
+          "title": "uieditor.editorProperties.globalStyles.colors.titleText.title",
+          "defaultValue": "#474747",
+          "type": "COLORPICKER"
+        },
+        "bodyText": {
+          "title": "uieditor.editorProperties.globalStyles.colors.bodyText.title",
+          "defaultValue": "#474747",
+          "type": "COLORPICKER"
+        },
+        "linkText": {
+          "title": "uieditor.editorProperties.globalStyles.colors.linkText.title",
+          "defaultValue": "#0071c7",
+          "type": "COLORPICKER"
+        },
+        "ratingStars": {
+          "title": "uieditor.editorProperties.globalStyles.colors.ratingStars.title",
+          "defaultValue": "#f7d619",
+          "type": "COLORPICKER"
+        },
+        "pageBackground": {
+          "title": "uieditor.editorProperties.globalStyles.colors.pageBackground.title",
+          "defaultValue": "#fafafa",
+          "type": "COLORPICKER"
+        }
+      }
+    },
+    "logo": {
+      "name": "Logos",
+      "iconName": "app",
+      "componentName": "Logos",
+      "form": {
+        "logoImage": {
+          "title": "uieditor.editorProperties.globalStyles.logo.logoImage.title",
+          "type": "IMAGE_UPLOADER",
+          "placeholder": "uieditor.editorProperties.globalStyles.logo.logoImage.placeholder",
+          "defaultValue": "",
+          "caption": "uieditor.editorProperties.globalStyles.logo.logoImage.caption"
+        },
+        "darkLogo": {
+          "title": "uieditor.editorProperties.globalStyles.logo.darkLogo.title",
+          "type": "IMAGE_UPLOADER",
+          "placeholder": "uieditor.editorProperties.globalStyles.logo.logoImage.placeholder",
+          "defaultValue": "",
+          "caption": "uieditor.editorProperties.globalStyles.logo.logoImage.caption"
+        }
+      }
+    },
+    "typography": {
+      "name": "Typography",
+      "iconName": "title",
+      "componentName": "Typography",
+      "form": {
+        "headingSpacer": {
+          "type": "GROUP_HEADER",
+          "title": "uieditor.editorProperties.globalStyles.typography.headingSpacer.title",
+          "symbol": "style"
+        },
+        "headingFont": {
+          "title": "uieditor.editorProperties.globalStyles.typography.headingFont.title",
+          "type": "FONT_PICKER",
+          "placeholder": "uieditor.editorProperties.globalStyles.typography.headingFont.label"
+        },
+        "headingBaseSize": {
+          "title": "uieditor.editorProperties.globalStyles.typography.headingBaseSize.title",
+          "type": "DROPDOWN",
+          "defaultValue": "16px",
+          "options": [{
+            "value": "16px",
+            "label": "16px"
+          }, {
+            "value": "18px",
+            "label": "18px"
+          }, {
+            "value": "20px",
+            "label": "20px"
+          }, {
+            "value": "22px",
+            "label": "22px"
+          }, {
+            "value": "24px",
+            "label": "24px"
+          }, {
+            "value": "26px",
+            "label": "26px"
+          }, {
+            "value": "28px",
+            "label": "28px"
+          }, {
+            "value": "30px",
+            "label": "30px"
+          }, {
+            "value": "32px",
+            "label": "32px"
+          }, {
+            "value": "34px",
+            "label": "34px"
+          }, {
+            "value": "36px",
+            "label": "36px"
+          }]
+        },
+        "baseSpacer": {
+          "type": "GROUP_HEADER",
+          "title": "uieditor.editorProperties.globalStyles.typography.baseSpacer.title",
+          "symbol": "style"
+        },
+        "bodyFont": {
+          "title": "uieditor.editorProperties.globalStyles.typography.bodyFont.title",
+          "type": "FONT_PICKER",
+          "placeholder": "uieditor.editorProperties.globalStyles.typography.bodyFont.label"
+        },
+        "bodyBaseSize": {
+          "title": "uieditor.editorProperties.globalStyles.typography.bodyBaseSize.title",
+          "type": "DROPDOWN",
+          "defaultValue": "16px",
+          "options": [{
+            "value": "14px",
+            "label": "14px"
+          }, {
+            "value": "15px",
+            "label": "15px"
+          }, {
+            "value": "16px",
+            "label": "16px"
+          }, {
+            "value": "17px",
+            "label": "17px"
+          }, {
+            "value": "18px",
+            "label": "18px"
+          }, {
+            "value": "19px",
+            "label": "19px"
+          }, {
+            "value": "20px",
+            "label": "20px"
+          }]
+        },
+        "fontUploadSpacer": {
+          "type": "GROUP_HEADER",
+          "title": "uieditor.editorProperties.globalStyles.typography.fontUploadSpacer.title",
+          "symbol": "style"
+        },
+        "fontUploader": {
+          "type": "FONT_UPLOADER",
+          "placeholder": "uieditor.editorProperties.globalStyles.typography.fontUploader.placeholder",
+          "caption": "uieditor.editorProperties.globalStyles.typography.fontUploader.caption",
+          "dropzonePlaceholder": "uieditor.editorProperties.globalStyles.typography.fontUploader.dropzone.placeholder"
+        }
+      }
+    }
+  },
+  "menus": {
+    "auxiliaryBar" : {
+      "label":"uieditor.menu.auxiliaryBar",
+      "type":"navigation",
+      "icon": "ellipsis",
+      "form": {
+        "type": "MENU_LINK"
+      }
+    },
+    "homeBar" : {
+      "label":"uieditor.menu.homeBar",
+      "type":"navigation",
+      "icon": "universalNavHome",
+      "form": {
+        "type": "MENU_LINK"
+      }
+    },
+    "navigationBar" : {
+      "label":"uieditor.menu.navigationBar",
+      "type":"navigation",
+      "icon": "hamburger",
+      "form": {
+        "type": "MENU_LINK"
+      }
+    },
+    "footer" : {
+      "label":"uieditor.menu.footer",
+      "type":"navigation",
+      "icon": "footer",
+      "form": {
+          "type": "MENU_LINK"
+      }
+    },
+    "bottomBar" : {
+      "label":"uieditor.menu.bottomBar",
+      "type":"navigation",
+      "icon": "footer",
+      "form": {
+        "type": "MENU_LINK"
+      }
+    }
+  }
+}

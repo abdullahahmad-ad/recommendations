@@ -1,0 +1,8 @@
+.root {
+  width: 100%;
+  display: table-row;
+  &.layout-mode-grid {
+    display: flex;
+  }
+  background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
+}

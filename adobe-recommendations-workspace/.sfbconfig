@@ -1,0 +1,23 @@
+{
+  "namespaces": [
+    {
+      "themeName": "Adobe",
+      "marketplacePath": "https://appdistribution.byappdirect.com",
+      "pageObjectsPath": "https://appdistribution.byappdirect.com/api/internal/storefront/v1"
+    },
+    {
+      "themeName": "adobe-recommendations",
+      "marketplacePath": "https://appdistribution.byappdirect.com",
+      "pageObjectsPath": "https://appdistribution.byappdirect.com/api/internal/storefront/v1"
+    }
+  ],
+  "defaultValues": {
+    "themeName": "Adobe",
+    "marketplacePath": "https://appdistribution.byappdirect.com",
+    "pageObjectsPath": "https://appdistribution.byappdirect.com/api/internal/storefront/v1"
+  },
+  "projectName": "adobe-recommendations-workspace",
+  "current": "adobe-recommendations",
+  "created": "2025-06-10T14:25:48.318Z",
+  "modified": "2025-06-10T16:06:29.721Z"
+}

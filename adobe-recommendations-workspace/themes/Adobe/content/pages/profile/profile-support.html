@@ -1,0 +1,15 @@
+{% from "/macros/profile/profile-navigation.html" import profileNavigation %}
+{% extends "/layout/profile.html" %}
+
+{% block data %}
+    <data type="navigator" />
+    <data type="application-additional-content" value="questions" />
+{% endblock %}
+
+{% block mainTitle %}
+    <h1 class="sr-only">{{application.summary.title}}</h1>
+{% endblock %}
+
+{% block profileContent %}
+    <component class="support-page" name="ProductAdditionalInfo" id="ProductAdditionalInfo1"></component>
+{% endblock %}

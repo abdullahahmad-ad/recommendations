@@ -1,0 +1,13 @@
+{% from "/macros/profile/profile-navigation.html" import profileNavigation %} 
+{% extends "/layout/profile.html" %}
+
+{% block data %}
+<data type="navigator" />
+<data type="application-additional-content" value="questions" />
+{% endblock %}
+
+{% block profileContentHeader %}{% endblock %}
+
+{% block profileContent %}
+	<component name="ProductQuestionForm" id="ProductQuestionForm-AddQuestions"></component>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "/layout/base.html" %}
+{% block data %}
+    <data type="navigator" />
+{% endblock %}
+{% block dataPage %}home{% endblock %}
+
+{% block mainTitle %}
+    <h1 class="sr-only">{{config.marketplaceName}}</h1>
+{% endblock %}
+
+{% block content %}
+    <PageOrderableContainer name="PageOrderableContainer" id="PageOrderableContainer1"></PageOrderableContainer>
+    <component name="StickyButtonPageScroll" id="StickyButtonPageScroll"></component>
+{% endblock %}

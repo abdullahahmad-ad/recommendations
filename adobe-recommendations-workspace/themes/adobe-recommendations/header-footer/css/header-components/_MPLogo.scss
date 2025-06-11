@@ -1,0 +1,47 @@
+.ad-uniheader__logo-container {
+    height: calc(max(var(--headerNavPadding, 20px), var(--logoHeight) + 20px));   
+    list-style: none;
+
+    &--link {
+        display: none;
+    }
+
+    &--image {
+        display: none;
+    }
+
+    // replace unav logo
+    #plaza-theme-logo{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0 $nav-item-padding-horizontal - 6px 0 0;
+
+        height: calc(max(var(--headerNavPadding, 20px), var(--logoHeight) + 20px));
+
+        &:hover {
+            background-color: transparent;
+            color: transparent;
+            text-decoration: none;
+        }
+
+        img {
+            // match Logo.scss in sfb-theme-components
+            object-fit: contain;
+            object-position: center center;
+
+            min-width: 30px;
+            height: var(--logoHeight, $nav-logo-height);
+        }
+    }
+}
+.ad-sso-header {
+    .ad-uniheader__logo-container--link {
+        padding-left: 14px;
+    }
+
+    #plaza-theme-logo {
+        padding-left: 14px;
+    }
+}

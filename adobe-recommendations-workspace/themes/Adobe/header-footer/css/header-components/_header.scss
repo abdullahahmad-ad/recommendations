@@ -1,0 +1,85 @@
+.ad-uniheader {
+    background: var(--headerNavBg, $headerNavBg);
+    border-bottom: 1px solid var(--headerNavBorderColor, $headerNavBorderColor);
+    font-family: $nav-font-family;    
+    height: calc(max(var(--headerNavPadding, 20px), var(--logoHeight) + 20px));
+    position: relative;
+    box-sizing: content-box;
+    z-index: 11;
+    
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: calc(max(var(--headerNavPadding, 20px), var(--logoHeight) + 20px));
+        list-style: none;        
+        margin: 0;
+        padding: 0;
+        position: relative;
+
+        &--section {
+            display: flex;
+            align-content: center;
+            height: calc(max(var(--headerNavPadding, 20px), var(--logoHeight) + 20px));
+            padding-left:0;
+
+            &-right {
+                margin-top: 0;
+            }
+
+            &-left {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                height: 100%;
+            }
+            
+            > .ad-component_list-item, > .ad-component_list--item {
+                height: 100%;
+                display: inline-block;
+                border-left: none;
+                border-right: none;
+                margin-left: -1px;
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+// Styling the main nav links
+.ad-component--link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--headerNavFontColor, $headerNavFontColor);
+	font-size: calc(#{var(--bodyBaseSize, $nav-item-font-size)} + #{var(--headerNavItemFontSizeOffset, 0px)});
+	height: 100%;
+	padding: 0 $nav-item-padding-horizontal;
+
+	&:hover {
+		background-color: var(--headerNavItemBgHover, $headerNavItemBgHover);
+		color: var(--headerNavFontHoverColor, $headerNavFontHoverColor);
+		text-decoration: none;
+	}
+
+    &:active {
+        background-color: var(--headerNavItemBgHover, $headerNavItemBgHover);
+        color: var(--headerNavFontSelectedColor, $headerNavFontSelectedColor);
+        text-decoration: none;
+    }
+}
+
+// Styling the user image
+.ad-img-profile-pic {
+	width: $profile-img-width;
+	height: $profile-img-height;
+	margin-right: $profile-img-margin-right;
+	border-radius: $profile-img-border-radius;
+}
+
+// Hide the Nav headings from view (accessibility)
+// https://www.w3.org/WAI/tutorials/menus/structure/
+.not-visible { display: none; }

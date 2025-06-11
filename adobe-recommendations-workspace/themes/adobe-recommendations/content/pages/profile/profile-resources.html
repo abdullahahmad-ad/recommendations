@@ -1,0 +1,14 @@
+{% extends "/layout/profile.html" %}
+
+{% block data %}
+<data type="navigator" />
+<data type="application-additional-content" value="recommendations,relatedProducts,questions" />
+{% endblock %}
+
+{% block mainTitle %}
+    <h1 class="sr-only">{{application.summary.title}}</h1>
+{% endblock %}
+
+{% block profileContent %}
+    <component name="ProductResources" id="ProductResources1"></component>
+{% endblock %}

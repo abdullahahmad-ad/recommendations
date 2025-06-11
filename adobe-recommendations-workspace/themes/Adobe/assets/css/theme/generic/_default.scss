@@ -1,0 +1,126 @@
+@import '../definitions/mixins';
+
+html {
+    @include html;
+}
+
+.ad-uniheader {
+    height: 52px;
+    background: #2d2a27;
+}
+
+p {
+    @include paragraph;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    @include text-4;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .main-footer {
+        margin-top: auto;
+    }
+}
+
+blockquote {
+    @include blockquote;
+}
+.title {
+    &--xxLarge { @include title-xxLarge; }
+    &--xLarge { @include title-xLarge; }
+    &--large { @include title-large; }
+    &--1 { @include title-1; }
+    &--2 { @include title-2; }
+    &--3 { @include title-3; }
+    &--4 { @include title-4; }
+    &--5 { @include title-5; }
+    &--6 { @include title-6; }
+}
+.text {
+    &--1 { @include text-1; }
+    &--2 { @include text-2; }
+    &--3 { @include text-3; }
+    &--4 { @include text-4; }
+    &--5 { @include text-5; }
+    &--6 { @include text-6; }
+    &--lower { @include text-lower; }
+}
+.paragraph { @include paragraph; }
+.blockquote { @include blockquote; }
+
+.color {
+    &--deepGray { @include color-deepGray }
+    &--darkGray { @include color-darkGray }
+    &--gray { @include color-gray }
+    &--midGray { @include color-midGray }
+    &--lightGray { @include color-lightGray }
+    &--faintGray { @include color-faintGray }
+}
+.background {
+    &--deepGray { @include background-deepGray }
+    &--darkGray { @include background-darkGray }
+    &--gray { @include background-gray }
+    &--midGray { @include background-midGray }
+    &--lightGray { @include background-lightGray }
+    &--faintGray { @include background-faintGray }
+    &--white { @include background-white }
+    &--faintLightGray { @include background-faintLightGray }
+}
+.border {
+    &--deepGray { @include border-deepGray }
+    &--darkGray { @include border-darkGray }
+    &--gray { @include border-gray }
+    &--midGray { @include border-midGray }
+    &--lightGray { @include border-lightGray }
+    &--faintGray { @include border-faintGray }
+}
+.radius {
+    &--2 { @include radius-2; }
+    &--3 { @include radius-3; }
+}
+
+.global-background-section {
+    background: $light-gray;
+}
+
+.global-component-spacer {
+    padding: 30px 0;
+}
+.global-component-spacer-top {
+    padding-top: 30px;
+}
+.global-component-spacer-bottom {
+    padding-bottom: 30px;
+}
+
+.global-component-nospacer {
+    margin-top: -30px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.skip-to-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .skip-link {
+        &:focus {
+            position: relative;
+            padding: 5px 10px;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            z-index: 9999;
+        }
+    }
+}

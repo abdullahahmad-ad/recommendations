@@ -1,0 +1,15 @@
+{% extends "/layout/profile.html" %}
+
+{% block data %}
+<data type="navigator" />
+<data type="application-additional-content" value="addonProducts,questions" />
+{% endblock %}
+
+{% block profileContentHeader %}{% endblock %}
+
+
+{% block profileContent %}
+    <div class="global-component-nospacer">
+        <component name="ProductVariants" id="ProductVariants"></component>
+    </div>
+{% endblock %}

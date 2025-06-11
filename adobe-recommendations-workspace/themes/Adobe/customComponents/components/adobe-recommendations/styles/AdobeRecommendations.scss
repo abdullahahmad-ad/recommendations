@@ -1,0 +1,47 @@
+.adobeRecommendations {
+	display: flex;
+	width: 100%;
+
+	&_container {
+		color: var(--text-color, #474747);
+		background-color: var(--background-color, #F5F5F5);
+
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding: 10px 25px 25px 25px;
+	}
+
+	&_description {
+		&--bigger {
+			font-size: 130%;
+		}
+		&--standard {
+			font-size: 100%;
+		}
+		&--smaller {
+			font-size: 70%;
+		}
+		&--bold {
+			font-weight: bold;	
+		}
+		&--italic {
+			font-style: italic;
+		}
+		&--strikethrough {
+			text-decoration: line-through;
+		}
+		&--underline {
+			text-decoration: underline;
+		}
+	}
+
+	&_row {
+		display: flex;
+		flex-direction: row;
+		flex-grow: 1;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}

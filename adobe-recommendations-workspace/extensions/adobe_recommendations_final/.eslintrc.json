@@ -1,0 +1,58 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "globals": {
+    "page": true,
+    "browser": true,
+    "port": true,
+    "provider": true,
+    "jasmine": true,
+    "FONT_PATH": true,
+    "IS_DEVELOPMENT": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:jest/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "jest"],
+  "rules": {
+    "no-console": "off",
+    "no-alert": "off",
+    "no-undef": "off",
+    "import/extensions": 0,
+    "@typescript-eslint/explicit-function-return-type": 1,
+    "no-debugger": "off",
+    "react/destructuring-assignment": 0,
+    "no-unused-vars": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "react/jsx-filename-extension": 0,
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+    "import/no-named-as-default": 0,
+    "react/prop-types": "off"
+  },
+  "overrides": [
+    {
+      "files": [ "__e2e__/cypress/**" ],
+      "rules": {
+        "jest/expect-expect": 0,
+        "@typescript-eslint/explicit-function-return-type": 0
+        }
+    }
+  ]
+}

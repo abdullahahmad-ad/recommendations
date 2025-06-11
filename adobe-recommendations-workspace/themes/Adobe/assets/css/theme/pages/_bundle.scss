@@ -1,0 +1,10 @@
+.product-bundle {
+	$spacing-top: 42px;
+	$spacing-mobile-top: 30px;
+
+	margin-top: $spacing-mobile-top;
+
+    @include media-breakpoint-up(lg) {
+		margin-top: $spacing-top;
+    }
+}

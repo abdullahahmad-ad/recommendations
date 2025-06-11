@@ -1,0 +1,264 @@
+@mixin tablet-up {
+	@media (min-width: 640px) {
+		@content;
+	}
+}
+@mixin desktop-up {
+	@media (min-width: 1025px) {
+		@content;
+	}
+}
+@mixin tablet-down {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+.custom-footer {
+	&__wrapper {
+		margin-top: 0px;
+		padding: 14px 24px;
+		background-color: #fff;
+		color: #575757;
+	}
+
+	max-width: 1292px;
+	margin: 0 auto;
+	font-size: 14px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column !important;
+
+	@include desktop-up {
+		flex-direction: row !important;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		@include desktop-up {
+			flex: 2 0 1px;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+		}
+
+		@include tablet-down {
+			display: flex;
+			flex-flow: column;
+		}
+	}
+
+	&__adlogo {
+		display: flex;
+		width: 100%;
+		margin-top: 50px;
+		text-align: left;
+	}
+
+	&__item:first-child {
+		margin: 14px 0;
+		line-height: 29px;
+
+		@include tablet-down {
+			margin-top: 0;
+		}
+	}
+	&__item .language-select {
+		background: #fff;
+		border: none;
+		font-size: 14px;
+	}
+
+	&__lang {
+		@include desktop-up {
+			flex: 1 0 1px;
+			text-align: center;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		flex-wrap: wrap;
+		flex-shrink: 0;
+		padding-left: 0;
+
+		@include tablet-down {
+			display: flex;
+			flex-flow: column;
+			list-style-type: none;
+		}
+
+		@include desktop-up {
+			flex: 1 0 1px;
+			text-align: center;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		&-item {
+			display: flex;
+			align-items: center;
+			padding-bottom: 14px;
+
+			@include desktop-up {
+				padding-bottom: 0 !important;
+				margin: 0 12px;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			@include tablet-down {
+				padding-top: 14px;
+			}
+
+			&__powered-by {
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 17px;
+
+				@include desktop-up {
+					flex: 1 0 1px;
+					text-align: left;
+					white-space: nowrap;
+				}
+
+				@include tablet-down {
+					font-size: 12px;
+				}
+			}
+		}
+		&-link {
+			margin: 0;
+			border-left: none;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 17px;
+			color: #575757;
+			white-space: nowrap;
+			text-decoration: none;
+
+			@include tablet-down {
+				font-size: 16px;
+			}
+
+			&:hover {
+				color: #575757;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.footer_icons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+
+		@include tablet-down {
+			margin-left: 0;
+			justify-content: left;
+		}
+
+		@include tablet-up {
+			margin-left: 0;
+		}
+
+		@include desktop-up {
+			margin-left: 0;
+		}
+
+		&-icon {
+			margin-right: 16px;
+			margin-left: 16px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.ad-dropdown-unav {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 17px;
+		position: relative;
+		cursor: pointer;
+		display: inline-block;
+		line-height: 1.6em;
+		height: 28px;
+		border-radius: 3px;
+		padding-right: 28px;
+		border: 1px solid transparent;
+
+		@include tablet-down {
+			margin-left: -10px;
+			font-size: 16px;
+		}
+
+		&:hover {
+			box-shadow: inset 0 1px 0 0 #fff, 0 1px 3px -1px rgba(147, 147, 147, 0.4);
+			background: #fff;
+			text-indent: 0;
+			color: #0a0a0a;
+			border: 1px solid #a7a7a7;
+			text-shadow: 0 1px 0 #fefefe;
+
+			@include tablet-down {
+				border-color: transparent;
+				box-shadow: none;
+			}
+
+			svg path {
+				fill: #0a0a0a;
+			}
+		}
+
+		svg {
+			position: absolute;
+			right: 5px;
+			top: 5px;
+
+			path {
+				fill: #575757;
+			}
+		}
+
+		&-label {
+			padding: 4px 8px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			display: inline-block;
+			font-size: 14px;
+			line-height: 19px;
+			vertical-align: middle;
+			color: #575757;
+			z-index: 1;
+			background: 0 0;
+		}
+
+		select {
+			cursor: pointer;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 5;
+			width: 100%;
+			height: 100%;
+			border: 0;
+			background: 0 0;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+$shader-step: 15%;
+
+/// Add percentage of black to a color
+@function shade($color, $percent) {
+    @return mix(#000000, $color, $percent);
+}
+
+/// Add percentage of white to a color
+@function tint($color, $percent) {
+    @return mix(#ffffff, $color, $percent);
+}

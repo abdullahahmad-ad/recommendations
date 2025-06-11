@@ -1,0 +1,21 @@
+{
+  "name": "adobe",
+  "version": "0.0.88",
+  "description": "",
+  "metadata": {
+    "toolkitVersion": "5.0.6",
+    "themeTemplate": "@appdirect/sfb-theme-plaza",
+    "themeVersion": "0.0.88",
+    "createdBy": "external dev",
+    "createdAt": "2025-06-10T14:25:32.659Z"
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@appdirect/sfb-theme-components": "1.0.4",
+    "sass": "^1.57.1",
+    "sass-loader": "^10.1.1"
+  }
+}

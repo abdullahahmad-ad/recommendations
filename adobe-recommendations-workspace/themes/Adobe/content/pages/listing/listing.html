@@ -1,0 +1,23 @@
+{% extends "/layout/base.html" %}
+
+{% block data %}
+<data type="navigator" />
+{% endblock %}
+
+{% block mainTitle %}
+    <h1 class="sr-only">{{listingProducts.i18n.allApplications}}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="global-component-spacer js-listing">
+        <component name="ProductListingControls" id="CategoryListingControls-ListingPage" editorVisible="false"></component>
+        <div class="row listing listing-page row--spaced">
+            <div class="col-md-3 col-sm-12 category-sidebar js-sidebar">
+                <component name="CategorySidebar" id="CategorySidebar-ListingPage"></component>
+            </div>
+            <div class="col-md-9 col-sm-12 js-product-listing">
+                <component name="ProductListing" id="ProductListing-ListingPage"></component>
+            </div>
+        </div>
+    </div>
+{% endblock %}

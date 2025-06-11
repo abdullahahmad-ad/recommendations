@@ -1,0 +1,26 @@
+{% macro componentsBundles(config) %}
+
+{% if config.pageId == "home" %}
+  <script src="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-home.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-home.css">
+{% elif config.pageId == "profile" %}
+  <script src="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-profile.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-profile.css">
+{% elif config.pageId == "listing" %}
+  <script src="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-listing.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-listing.css">
+{% elif config.pageId == "help" %}
+  <script src="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-help.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-help.css">
+{% elif config.pageId == "compare" %}
+  <script src="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-compare.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-compare.css">
+{% elif config.pageId == "bundle" %}
+  <script src="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components-bundle.css">
+{% else %}
+  <script src="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ config.channelSettings.channelCanonicalBaseUrl }}/sfb-theme-components@0/sfb-components.css">
+{% endif %}
+
+{% endmacro %}

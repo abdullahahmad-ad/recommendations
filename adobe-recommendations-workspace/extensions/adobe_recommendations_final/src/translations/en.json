@@ -1,0 +1,13 @@
+{
+  "app.start": " Hi! Welcome to your developement environment for AppDirect extensions.",
+  "hello.world": "Hello World!",
+  "getting.started": "Getting Started",
+  "header.description": "Read about our developement guidelines and design system at: {anchor}",
+  "mp.info": "You are on the {tenant} tenant and your locale is {locale}. Your default currency is {currency}.",
+	"table.example": "Example Table",
+  "data.call.example": "Example call to retrieve data",
+  "api.call.button": "API Call",
+  "api.call.username": "Username: {username}",
+  "api.call.email": "Email: {email}",
+  "asset.example": "Example Asset"
+}

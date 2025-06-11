@@ -1,0 +1,58 @@
+@import 'functions';
+
+// general colors
+
+$deep-gray: #474747;
+$dark-gray: #707070;
+$gray: #CACACA;
+$mid-gray: #EAEAEA;
+$light-gray: #F4F4F4;
+$faint-gray: #F8F8F8;
+$faint-light-gray: #F9F9F9;
+
+$white: #ffffff;
+
+// button colors
+
+$btn-primary-color: #FFFFFF;
+$btn-primary-bg: #009DDB;
+$btn-primary-border: #0084BC;
+
+$btn-secondary-color: #474747;
+$btn-secondary-bg: #F1F1F1;
+$btn-secondary-border: #CDCDCD;
+
+$btn-emphasis-color: #FFFFFF;
+$btn-emphasis-bg: #35A800;
+$btn-emphasis-border: #278F00;
+
+$btn-emphasisAlt-color: #FFFFFF;
+$btn-emphasisAlt-bg: #FB641B;
+$btn-emphasisAlt-border: #D75500;
+
+$btn-box-shadow: 0 2px 2px 0 rgba(112,112,112,0.3);
+
+/*
+ __mixins
+ */
+@mixin button-colors-active($bg, $border) {
+    background-color: shade($bg, $shader-step);
+    border-color: shade($border, $shader-step);
+}
+@mixin button-colors-hover($bg, $border) {
+    background-color: tint($bg, $shader-step);
+    border-color: tint($border, $shader-step);
+    box-shadow: $btn-box-shadow;
+}
+@mixin button-colors($bg, $border) {
+    background-color: $bg;
+    border: 1px solid $border;
+
+    &:active {
+        @include button-colors-active($bg, $border);
+    }
+    &:hover {
+        @include button-colors-hover($bg, $border);
+    }
+}
+

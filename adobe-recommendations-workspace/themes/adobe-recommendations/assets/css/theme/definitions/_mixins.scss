@@ -1,0 +1,111 @@
+@import 'colors';
+@import 'typography';
+@import 'variables';
+@import 'accessibility';
+
+@mixin html {
+    @include default($genericFontSize);
+    color: var(--bodyText, $deep-gray);
+    background-color: var(--pageBackground, $white);
+    scroll-behavior: smooth;
+}
+
+@mixin title-xxLarge { @include title($headingFontSizeXXLarge); }
+@mixin title-xLarge { @include title($headingFontSizeXLarge); }
+@mixin title-large { @include title($headingFontSizeLarge); }
+@mixin title-1 { @include title($headingFontSize1); }
+@mixin title-2 { @include title($headingFontSize2); }
+@mixin title-3 { @include title($headingFontSize3); }
+@mixin title-4 { @include title($headingFontSize4); }
+@mixin title-5 { @include title($headingFontSize5); }
+@mixin title-6 { @include title($headingFontSize6); }
+
+@mixin text-1 { @include text($bodyFontSize1); }
+@mixin text-2 { @include text($bodyFontSize2); }
+@mixin text-3 { @include text($bodyFontSize3); }
+@mixin text-4 { @include text($bodyFontSize4); }
+@mixin text-5 { @include text($bodyFontSize5); }
+@mixin text-6 { @include text($bodyFontSize6); }
+@mixin text-lower {
+    text-transform: lowercase;
+}
+
+@mixin paragraph {
+    @include text($bodyFontSize4);
+    margin: 1em 0;
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@mixin blockquote {
+    @include paragraph;
+    padding-left: 20px;
+    border-left: 4px solid $gray;
+}
+
+@mixin color-deepGray { color: $deep-gray; }
+@mixin color-darkGray { color: $dark-gray; }
+@mixin color-gray { color: $gray; }
+@mixin color-midGray { color: $mid-gray; }
+@mixin color-lightGray { color: $light-gray; }
+@mixin color-faintGray { color: $faint-gray; }
+@mixin color-white { color: $white; }
+
+@mixin background-deepGray { background-color: $deep-gray; }
+@mixin background-darkGray { background-color: $dark-gray; }
+@mixin background-gray { background-color: $gray; }
+@mixin background-midGray { background-color: $mid-gray; }
+@mixin background-lightGray { background-color: $light-gray; }
+@mixin background-faintGray { background-color: $faint-gray; }
+@mixin background-faintLightGray { background-color: $faint-light-gray; }
+@mixin background-white { background-color: $white; }
+
+@mixin border-deepGray { border: 1px solid $deep-gray; }
+@mixin border-darkGray { border: 1px solid $dark-gray; }
+@mixin border-gray { border: 1px solid $gray; }
+@mixin border-midGray { border: 1px solid $mid-gray; }
+@mixin border-lightGray { border: 1px solid $light-gray; }
+@mixin border-faintGray { border: 1px solid $faint-gray; }
+@mixin border-white { border: 1px solid $white; }
+
+@mixin radius-2 { border-radius: 2px; }
+@mixin radius-3 { border-radius: 3px; }
+
+@mixin button-primary {
+    @include button-colors($btn-primary-bg, $btn-primary-border);
+    color: $btn-primary-color;
+}
+@mixin button-primary-active {
+    @include button-colors-active($btn-primary-bg, $btn-primary-border);
+}
+@mixin button-secondary {
+    @include button-colors($btn-secondary-bg, $btn-secondary-border);
+    color: $btn-secondary-color;
+}
+@mixin button-secondary-active {
+    @include button-colors-active($btn-secondary-bg, $btn-secondary-border);
+}
+@mixin button-emphasis {
+    @include button-colors($btn-emphasis-bg, $btn-emphasis-border);
+    color: $btn-emphasis-color;
+}
+@mixin button-emphasis-active {
+    @include button-colors-active($btn-emphasis-bg, $btn-emphasis-border);
+}
+@mixin button-emphasisAlt {
+    @include button-colors($btn-emphasisAlt-bg, $btn-emphasisAlt-border);
+    color: $btn-emphasisAlt-color;
+}
+@mixin button-emphasisAlt-active {
+    @include button-colors-active($btn-emphasisAlt-bg, $btn-emphasisAlt-border);
+}
+
+@mixin button-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+}

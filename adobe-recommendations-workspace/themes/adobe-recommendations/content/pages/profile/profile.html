@@ -1,0 +1,24 @@
+{% from "/macros/profile/profile-navigation.html" import profileNavigation %}
+{% extends "/layout/profile.html" %}
+{% block profileSpacer %}{% endblock %}
+{% block data %}
+    <data type="navigator" />
+    <data type="application-additional-content" value="recommendations,relatedProducts,questions,answers,reviews" />
+{% endblock %}
+
+{% block mainTitle %}
+    <h1 class="sr-only">{{application.summary.title}}</h1>
+{% endblock %}
+
+{% block profileContentHeader %}
+    <component name="ProductBanner" id="ProductBanner"></component>
+    <component name="ProductTabMenu" id="ProductTabMenu"></component>
+{% endblock %}
+
+{% block profileContent %}
+    <PageOrderableContainer name="PageOrderableContainer" id="PageOrderableContainerProfilePage"></PageOrderableContainer>
+{% endblock %}
+
+{% block belowProfileContent %}
+    <component name="ProductSimilarApps" id="ProductSimilarApps"></component>
+{% endblock %}
